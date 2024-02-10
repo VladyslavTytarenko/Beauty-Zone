@@ -1,0 +1,63 @@
+.mobile-menu {
+  position: relative;
+  padding: 16px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--default-light-color);
+  transform: translateX(100%);
+  transition: transform 0.2s;
+  z-index: 2;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    fill: var(--brand-color);
+    cursor: pointer;
+    transition: scale 0.2s;
+
+    &:hover {
+      scale: 1.3;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--main-color);
+
+    &:hover {
+      color: var(--brand-color);
+    }
+  }
+
+  &__address-list {
+    display: flex;
+    gap: 16px;
+  }
+}
