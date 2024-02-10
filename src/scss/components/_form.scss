@@ -1,0 +1,39 @@
+.form-field {
+  padding-bottom: 24px;
+
+  &__lable {
+    display: block;
+  }
+
+  &__input {
+    padding: 18px 33px;
+    background-color: transparent;
+    border-radius: 32px;
+    border: 2px solid var(--default-neutral-color);
+    color: var(--default-light-color);
+    width: 100%;
+    transition: border 0.2s;
+
+    &:focus {
+      border: 2px solid var(--default-light-color);
+      outline: none;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--default-light-color);
+      transition: color 0.2s;
+    }
+
+    &:focus::placeholder {
+      color: var(--default-neutral-color);
+    }
+  }
+}
+
+.form-button {
+  margin: 0 auto;
+  max-width: 295px;
+  margin-bottom: 8px;
+}

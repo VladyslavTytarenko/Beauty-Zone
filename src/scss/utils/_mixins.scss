@@ -1,0 +1,17 @@
+@mixin accent {
+  color: var(--brand-color);
+}
+
+@mixin capitalize {
+  text-transform: capitalize;
+}
+
+@mixin bold-text {
+  font-family: 'Roboto';
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@mixin centered-text {
+  text-align: center;
+}

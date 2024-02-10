@@ -1,0 +1,32 @@
+.procedures-section {
+  margin-bottom: 96px;
+
+  &__title {
+    margin-bottom: 48px;
+
+    &--centered {
+      @include centered-text;
+    }
+
+    &--accent {
+      @include accent;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 16px;
+  }
+}

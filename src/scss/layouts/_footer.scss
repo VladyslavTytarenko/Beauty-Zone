@@ -1,0 +1,84 @@
+.footer {
+  position: relative;
+  padding: 56px 0;
+  background-color: var(--main-color);
+  background-image: url('../images/footer-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background-image: url('../images/nasal-drops.png');
+    width: 245px;
+    height: 150px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+  }
+
+  &__logo,
+  &__menu,
+  &__address-info,
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 16px;
+  }
+
+  &__address-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__address-icon-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    color: var(--default-light-color);
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.1;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--brand-color);
+      font-size: 16px;
+    }
+  }
+
+  &__address-icon {
+    fill: var(--default-light-color);
+    transition: fill 0.2s;
+
+    &:hover {
+      fill: var(--brand-color);
+    }
+  }
+
+  &__data-protected {
+    color: var(--default-neutral-color);
+    font-style: normal;
+    font-size: 13px;
+    line-height: 1.1;
+  }
+}

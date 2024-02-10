@@ -1,0 +1,59 @@
+.hero-section {
+  padding-top: 123px;
+  background-image: url('../images/hero-background.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-bottom: 165px;
+
+  &__container {
+    padding-left: 106px;
+    display: flex;
+    flex-direction: column;
+    max-width: 530px;
+    gap: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 230px;
+    gap: 14px;
+  }
+
+  &__title {
+    font-family: 'Play';
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 0.8;
+    margin: 0;
+
+    &--capitalize {
+      @include capitalize;
+    }
+
+    &--accent {
+      @include accent;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__button-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+  }
+}
