@@ -1,5 +1,9 @@
 .about-us-section {
-  margin-bottom: 175px;
+  margin-bottom: 120px;
+
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 175px;
+  }
 
   &__container {
     position: relative;
@@ -11,12 +15,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
-    padding-top: 40px;
+    gap: 16px;
+    padding-top: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+      padding-top: 40px;
+      gap: 40px;
+    }
   }
 
   &__title {
+    padding-bottom: 8px;
     margin: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+      padding-bottom: 0;
+    }
   }
 
   &__brand-title {
@@ -43,9 +57,13 @@
   }
 
   &__photo-container {
-    display: flex;
-    flex-grow: 1;
-    max-width: 500px;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-grow: 1;
+      max-width: 500px;
+    }
   }
 
   &__photo-list {
@@ -74,13 +92,32 @@
   }
 
   &__star-little,
-  &__star-medium,
+  &__star-medium {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      animation-name: star-scale;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+
   &__star-large {
+    width: 40px;
+    height: 40px;
     position: absolute;
     z-index: -1;
     animation-name: star-scale;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 64px;
+      height: 64px;
+    }
   }
 
   &__star-little {
@@ -96,8 +133,13 @@
   }
 
   &__star-large {
-    top: 50%;
-    right: 27%;
+    bottom: -10%;
+    right: 5%;
     fill: var(--main-color);
+
+    @media screen and (min-width: $bp-desktop) {
+      top: 50%;
+      right: 27%;
+    }
   }
 }

@@ -6,15 +6,37 @@
     background-image: url('../images/advantages-background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    top: -80%;
+    top: -5%;
     width: 100%;
-    height: 2170px;
+    height: 1000px;
     position: absolute;
     z-index: -1;
+
+    @media screen and (min-width: $bp-mobile) {
+      background-image: url('../images/advantages-background.png');
+      top: -10%;
+      height: 1000px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      background-image: url('../images/advantages-background.png');
+      top: -20%;
+      height: 1000px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      background-image: url('../images/advantages-background.png');
+      top: -80%;
+      height: 2170px;
+    }
   }
 
   &__title {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 48px;
+    }
 
     &--centered {
       @include centered-text;
@@ -28,14 +50,24 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 56px;
-    max-width: 1060px;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 56px;
+      flex-direction: row;
+      max-width: 1060px;
+    }
   }
 
   &__item {
     display: flex;
-    flex-basis: calc((100% - 112px) / 3);
+    max-width: 500px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-basis: calc((100% - 112px) / 3);
+    }
   }
 
   &__card {

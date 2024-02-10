@@ -24,9 +24,13 @@ img {
 body {
   color: var(--main-color);
   font-family: 'Roboto';
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   margin: 0;
+
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 22px;
+  }
 }
 
 ul {
