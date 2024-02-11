@@ -1,5 +1,9 @@
 .form-field {
-  padding-bottom: 24px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-bottom: 24px;
+  }
 
   &__lable {
     display: block;
