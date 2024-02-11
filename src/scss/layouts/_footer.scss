@@ -1,33 +1,65 @@
 .footer {
   position: relative;
-  padding: 56px 0;
+  padding: 32px 0;
   background-color: var(--main-color);
   background-image: url('../images/footer-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  @media screen and (min-width: $bp-desktop) {
+    padding: 56px 0;
+  }
+
   &::after {
-    position: absolute;
-    background-repeat: no-repeat;
-    bottom: 0;
-    right: 0;
-    content: '';
-    background-image: url('../images/nasal-drops.png');
-    width: 245px;
-    height: 150px;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      background-repeat: no-repeat;
+      bottom: 0;
+      right: 0;
+      content: '';
+      background-image: url('../images/nasal-drops.png');
+      width: 245px;
+      height: 150px;
+    }
   }
 
   &__container {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      align-items: left;
+      text-align: left;
+      gap: 20px;
+    }
   }
 
   &__nav,
   &__address {
     display: flex;
+    flex-direction: column;
     flex-basis: 50%;
-    gap: 20px;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__logo {
+    align-self: center;
+    margin-bottom: 42px;
+
+    @media screen and (min-width: $bp-desktop) {
+      align-self: flex-start;
+      margin-bottom: 0;
+    }
   }
 
   &__logo,
@@ -49,7 +81,13 @@
 
   &__address-icon-list {
     display: flex;
-    gap: 24px;
+    justify-content: center;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 24px;
+      justify-content: left;
+    }
   }
 
   &__link {
