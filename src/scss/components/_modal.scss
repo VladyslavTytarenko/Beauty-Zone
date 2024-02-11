@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 30px 30px;
+  padding: 60px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,13 +85,18 @@
   &__button {
     fill: var(--default-light-color);
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 25px;
+    right: 25px;
     border: none;
     background-color: transparent;
     cursor: pointer;
     padding: 0;
     transition: scale 0.2s;
+
+    @media screen and (min-width: $bp-desktop) {
+      top: 50px;
+      right: 50px;
+    }
 
     &:hover {
       scale: 1.5;
