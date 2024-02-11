@@ -1,6 +1,10 @@
 .advantages-section {
   position: relative;
-  margin-bottom: 96px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 96px;
+  }
 
   &__background {
     background-image: url('../images/advantages-background.png');
@@ -40,6 +44,10 @@
 
     &--centered {
       @include centered-text;
+    }
+
+    &--accent {
+      @include accent;
     }
   }
 
