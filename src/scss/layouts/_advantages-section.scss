@@ -17,21 +17,24 @@
     z-index: -1;
 
     @media screen and (min-width: $bp-mobile) {
-      background-image: url('../images/advantages-background.png');
       top: -15%;
       height: 1000px;
     }
 
     @media screen and (min-width: $bp-tablet) {
-      background-image: url('../images/advantages-background.png');
       top: -20%;
       height: 1000px;
     }
 
     @media screen and (min-width: $bp-desktop) {
-      background-image: url('../images/advantages-background.png');
       top: -80%;
       height: 2170px;
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/retina/advantages-background@2x.png');
     }
   }
 

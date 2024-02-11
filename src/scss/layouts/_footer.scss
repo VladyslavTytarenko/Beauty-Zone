@@ -21,6 +21,12 @@
       background-image: url('../images/nasal-drops.png');
       width: 245px;
       height: 150px;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/retina/nasal-drops@2x.png');
+      }
     }
   }
 

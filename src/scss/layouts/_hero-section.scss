@@ -1,9 +1,16 @@
 .hero-section {
   padding-top: 70px;
-  background-image: url('../images/hero-background.png');  background-repeat: no-repeat;
+  background-image: url('../images/hero-background.png');  
+  background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   padding-bottom: 120px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/retina/hero-background@2x.png');
+  }
 
   @media screen and (min-width: $bp-tablet) {
     background-size: contain;

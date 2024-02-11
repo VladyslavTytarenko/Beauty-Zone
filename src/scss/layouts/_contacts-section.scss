@@ -23,17 +23,13 @@
   }
 
   &__container {
-    // margin: 0 auto;
     display: flex;
     flex-direction: column-reverse;
-    // align-items: center;
     justify-content: center;
     gap: 24px;
 
     @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
-      // flex-wrap: wrap;
-      // max-width: 1060px;
       gap: 32px;
     }
   }
@@ -100,22 +96,3 @@
     }
   }
 }
-
-/* .modal-title {
-  margin: 0;
-  padding-bottom: 40px;
-  text-align: center;
-  font-family: 'Play';
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 1.15;
-  color: var(--default-light-color);
-} */
-
-/* .form {
-  width: 100%;
-  max-width: 310px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
